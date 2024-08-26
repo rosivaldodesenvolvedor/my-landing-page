@@ -1,0 +1,89 @@
+/* Header.css */
+
+:root {
+  --primary-color: #4caf50;
+  --secondary-color: #333;
+  --hover-color: #45a049;
+}
+
+.header {
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+  margin-right: 30px;
+}
+
+.nav-item {
+  background-color: transparent;
+  border: none;
+  color: rgb(25, 13, 13);
+  font-size: 1rem;
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.nav-item:hover {
+  background-color: var(--hover-color);
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    flex-direction: column;
+    display: none;
+    background-color: var(--secondary-color);
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 150px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .navbar {
+    flex-direction: column;
+  }
+
+  .nav-item {
+    text-align: left;
+    width: 100%;
+  }
+}
+
+/* Responsividade para telas muito pequenas */
+@media (max-width: 480px) {
+  .logo h1 {
+    font-size: 1.2rem;
+  }
+
+  .nav-item {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+}
