@@ -1,18 +1,32 @@
-/* Header.css */
-
 :root {
   --primary-color: #4caf50;
   --secondary-color: #333;
   --hover-color: #45a049;
+  --initial-header-height: 80px;
+  --scrolled-header-height: 60px; /* 20% menor */
+  --initial-header-bg: transparent;
+  --scrolled-header-bg: rgba(0, 0, 0, 0.8); /* Cor de fundo ao rolar */
 }
 
 .header {
-  color: white;
+  background-image: linear-gradient(45deg, #4caf50, #2196f3);
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  height: var(--initial-header-height);
+  background-color: var(--initial-header-bg);
+  transition: height 0.5s ease, background-color 0.5s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.header.scrolled {
+  height: var(--scrolled-header-height);
 }
 
 .navbar {
@@ -101,7 +115,7 @@
   margin-right: 10px;
   border-radius: 50%;
   background-image: linear-gradient(45deg, #4caf50, #2196f3);
-  padding: 5px; /* Aumentando o padding para a borda externa */
+  padding: 5px;
 }
 
 .profile-picture img {
