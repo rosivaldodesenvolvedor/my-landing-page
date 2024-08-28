@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Rosivaldo from "../../assets/Rosivaldo.jpg";
+import Ro from "../commons/Icons/ProgramerFrontEnd.js";
 import "./index.css";
 
 const Header = () => {
